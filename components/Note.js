@@ -2,13 +2,7 @@ import React from "react";
 import { StyleSheet, Text, Button, View } from "react-native";
 
 export default function Note({ title, content, onClick }) {
-  return (
-    <View style={styles.container} onPress={onClick}>
-      <Text style={styles.h1}>{title}</Text>
-      <Text>{content}</Text>
-      <Button title='Edit note' onPress={onClick} />
-    </View>
-  );
+  return <View style={styles.container}></View>;
 }
 
 const styles = StyleSheet.create({

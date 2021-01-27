@@ -11,41 +11,12 @@ import {
 import Note from "../components/Note";
 import { getAllData } from "../storage";
 
-export default function Home({ navigation }) {
-  const [notes, setNotes] = useState([]);
-  useEffect(() => {
-    getAllData().then((data) => {
-      setNotes(
-        data.map((note) => {
-          return (
-            <Note
-              title={note[0]}
-              content={note[1]}
-              onClick={() => {
-                navigation.navigate("EditNote", {
-                  title: note[0],
-                  content: note[1],
-                });
-              }}
-            />
-          );
-        }),
-      );
-    });
-  });
+export default function Home() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <ScrollView>
         <View style={styles.container}>
-          <Text style={styles.title}>My Notes</Text>
-          <Button
-            title='New Note'
-            onPress={() => {
-              navigation.navigate("EditNote");
-            }}
-          />
-          {notes}
-          <StatusBar style='auto' />
+          <Text style={styles.title}>Hello World!</Text>
         </View>
       </ScrollView>
     </SafeAreaView>

@@ -3,8 +3,8 @@ import { StyleSheet, SafeAreaView, Button, TextInput } from "react-native";
 import { saveData } from "../storage";
 
 export default function EditNote({ route, navigation }) {
-  const [title, setTitle] = useState(route.params.title ?? "");
-  const [content, setContent] = useState(route.params.content ?? "");
+  const [title, setTitle] = useState(route.params?.title ?? "");
+  const [content, setContent] = useState(route.params?.content ?? "");
   return (
     <SafeAreaView style={styles.container}>
       <TextInput

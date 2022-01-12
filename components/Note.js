@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, Button, View } from "react-native";
 
-export default function Note({ title, content, onClick }) {
+export default function Note({ title, content, onClick, key }) {
   return (
     <View style={styles.container} onPress={onClick}>
       <Text style={styles.h1}>{title}</Text>

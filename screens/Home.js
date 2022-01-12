@@ -16,9 +16,10 @@ export default function Home({ navigation }) {
   useEffect(() => {
     getAllData().then((data) => {
       setNotes(
-        data.map((note) => {
+        data.map((note, index) => {
           return (
             <Note
+              key={index}
               title={note[0]}
               content={note[1]}
               onClick={() => {
